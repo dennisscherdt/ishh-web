@@ -39,13 +39,18 @@
 </template>
 
 <script setup lang="ts">
+interface NavItem {
+	label: string;
+	to: string;
+}
+
 const isOpen = defineModel<boolean>('isOpen', { required: true });
 
 function closeMenu() {
 	isOpen.value = false;
 }
 
-const navItems = [
+const navItems: NavItem[] = [
 	{
 		label: 'Home',
 		to: '/',
