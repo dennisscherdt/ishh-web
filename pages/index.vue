@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="space-y-8">
 		<SongCard
 			:image="oldSoulJointsCover"
 			image-alt="Old Soul Joints"
@@ -14,6 +14,7 @@
 			}"
 			class="mx-auto"
 		/>
+		<p class="text-center text-lg text-stone-200">Just getting started... more to come soon.</p>
 	</div>
 </template>
 
