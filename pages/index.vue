@@ -1,5 +1,22 @@
 <template>
 	<div>
-		<h1>Hello World</h1>
+		<SongCard
+			:image="oldSoulJointsCover"
+			image-alt="Old Soul Joints"
+			title="Old Soul Joints"
+			release-date="June 20th, 2025"
+			:links="{
+				appleMusic: '#',
+				spotify: '#',
+				youtube: '#',
+				soundcloud: '#',
+				bandcamp: '#',
+			}"
+		/>
 	</div>
 </template>
+
+<script setup lang="ts">
+import SongCard from '~/components/song/SongCard.vue';
+import oldSoulJointsCover from '~/public/images/covers/old-soul-joints-ishh-cover.jpg';
+</script>

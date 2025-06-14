@@ -1,6 +1,6 @@
 <template>
 	<AppHeader />
-	<main class="min-h-screen">
+	<main class="min-h-screen bg-stone-900 p-4">
 		<NuxtPage />
 	</main>
 	<AppFooter />
