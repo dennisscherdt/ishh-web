@@ -19,4 +19,8 @@
 <script setup lang="ts">
 import SongCard from '~/components/song/SongCard.vue';
 import oldSoulJointsCover from '~/public/images/covers/old-soul-joints-ishh-cover.jpg';
+
+useHead({
+	title: 'Ishh Music',
+});
 </script>

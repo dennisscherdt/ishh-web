@@ -11,6 +11,18 @@
 <script setup lang="ts">
 import AppHeader from '~/components/AppHeader.vue';
 import AppFooter from '~/components/AppFooter.vue';
+
+// useHead(
+// 	{
+// 		meta: [
+// 			{
+// 				name: 'site-name',
+// 				content: 'Ishh Music',
+// 			},
+// 		],
+// 	},
+// 	{ tagPriority: 11 },
+// );
 </script>
 
 <style scoped>
