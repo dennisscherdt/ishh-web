@@ -4,7 +4,7 @@
 			<NuxtLink to="/">
 				<HeaderLogo class="size-14 text-stone-200" />
 			</NuxtLink>
-			<HeaderHamburger @click="toggleNav" />
+			<HeaderHamburger :is-open="isNavOpen" @click="toggleNav" />
 			<HeaderNavMobile v-model:is-open="isNavOpen" />
 		</div>
 	</header>
