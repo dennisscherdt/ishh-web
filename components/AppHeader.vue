@@ -1,5 +1,5 @@
 <template>
-	<header class="flex h-24 items-center justify-between bg-stone-900 p-4">
+	<header class="flex h-24 items-center justify-between bg-stone-950/60 p-4 backdrop-blur-sm">
 		<HeaderLogo class="size-14 text-stone-200" />
 		<HeaderHamburger @click="isNavOpen = true" />
 		<HeaderNavMobile v-model:is-open="isNavOpen" />

@@ -1,9 +1,11 @@
 <template>
-	<AppHeader />
-	<main class="min-h-screen p-4">
-		<NuxtPage />
-	</main>
-	<AppFooter />
+	<div id="app">
+		<AppHeader />
+		<main class="min-h-screen p-4">
+			<NuxtPage />
+		</main>
+		<AppFooter />
+	</div>
 </template>
 
 <script setup lang="ts">
@@ -12,11 +14,11 @@ import AppFooter from '~/components/AppFooter.vue';
 </script>
 
 <style scoped>
-main {
+#app {
 	position: relative;
 }
 
-main::before {
+#app::before {
 	content: '';
 	position: fixed;
 	top: 0;
