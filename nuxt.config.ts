@@ -14,6 +14,11 @@ export default defineNuxtConfig({
 					tagPriority: 11,
 				},
 				{
+					name: 'og:image',
+					content: '/og-image.jpg',
+					tagPriority: 11,
+				},
+				{
 					name: 'apple-mobile-web-app-title',
 					content: 'Ishh',
 				},
