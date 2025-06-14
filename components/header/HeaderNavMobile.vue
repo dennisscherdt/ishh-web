@@ -1,8 +1,16 @@
 <template>
 	<Transition name="slide" mode="out-in">
-		<div v-if="isOpen" class="fixed top-0 right-0 z-50 h-screen w-80 bg-stone-900 shadow-lg">
+		<nav
+			v-show="isOpen"
+			class="fixed top-0 right-0 h-screen w-80 bg-stone-900 shadow-lg"
+			aria-label="Mobile navigation"
+		>
 			<div class="flex h-24 items-center justify-end p-4">
-				<button class="text-stone-200 hover:text-stone-400" @click="closeMenu">
+				<button
+					class="text-stone-200 hover:text-stone-400"
+					aria-label="Close navigation menu"
+					@click="closeMenu"
+				>
 					<span class="sr-only">Close menu</span>
 					<svg
 						class="size-8"
@@ -20,21 +28,19 @@
 					</svg>
 				</button>
 			</div>
-			<nav class="p-4">
-				<ul class="flex flex-col gap-4">
-					<li v-for="item in navItems" :key="item.label">
-						<NuxtLink
-							:to="item.to"
-							class="block text-lg text-stone-200 hover:text-stone-400"
-							:class="{ 'text-stone-400': $route.path === item.to }"
-							@click="closeMenu"
-						>
-							{{ item.label }}
-						</NuxtLink>
-					</li>
-				</ul>
-			</nav>
-		</div>
+			<ul class="flex flex-col gap-4 p-4">
+				<li v-for="item in navItems" :key="item.label">
+					<NuxtLink
+						:to="item.to"
+						class="block text-lg text-stone-200 hover:text-stone-400"
+						:class="{ 'text-stone-400': $route.path === item.to }"
+						@click="closeMenu"
+					>
+						{{ item.label }}
+					</NuxtLink>
+				</li>
+			</ul>
+		</nav>
 	</Transition>
 </template>
 
@@ -45,6 +51,19 @@ interface NavItem {
 }
 
 const isOpen = defineModel<boolean>('isOpen', { required: true });
+
+// This is to prevent the main background image from shifting when the menu is opening
+watch(isOpen, (value) => {
+	if (value) {
+		document.body.style.overflow = 'hidden';
+	} else {
+		document.body.style.overflow = '';
+	}
+});
+
+onUnmounted(() => {
+	document.body.style.overflow = '';
+});
 
 function closeMenu() {
 	isOpen.value = false;

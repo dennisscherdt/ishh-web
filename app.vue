@@ -1,24 +1,16 @@
 <template>
 	<div id="app">
-		<AppHeader @toggle-nav="toggleNav" />
+		<AppHeader />
 		<main class="min-h-screen p-4">
 			<NuxtPage />
 		</main>
 		<AppFooter />
-		<HeaderNavMobile v-model:is-open="isNavOpen" />
 	</div>
 </template>
 
 <script setup lang="ts">
 import AppHeader from '~/components/AppHeader.vue';
 import AppFooter from '~/components/AppFooter.vue';
-import HeaderNavMobile from '~/components/header/HeaderNavMobile.vue';
-
-const isNavOpen = ref(false);
-
-function toggleNav() {
-	isNavOpen.value = !isNavOpen.value;
-}
 </script>
 
 <style scoped>
