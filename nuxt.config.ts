@@ -13,6 +13,17 @@ export default defineNuxtConfig({
 					content: 'Ishh Music',
 					tagPriority: 11,
 				},
+				{
+					name: 'apple-mobile-web-app-title',
+					content: 'Ishh',
+				},
+			],
+			link: [
+				{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+				{ rel: 'icon', type: 'image/png', href: '/favicon-96x96.png', sizes: '96x96' },
+				{ rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+				{ rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
+				{ rel: 'manifest', href: '/site.webmanifest' },
 			],
 		},
 	},
