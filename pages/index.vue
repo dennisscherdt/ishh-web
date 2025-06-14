@@ -12,6 +12,7 @@
 				soundcloud: '#',
 				bandcamp: '#',
 			}"
+			class="mx-auto"
 		/>
 	</div>
 </template>

@@ -1,12 +1,12 @@
 <template>
-	<header
-		class="relative z-50 flex h-24 items-center justify-between bg-stone-950/60 p-4 backdrop-blur-sm"
-	>
-		<NuxtLink to="/">
-			<HeaderLogo class="size-14 text-stone-200" />
-		</NuxtLink>
-		<HeaderHamburger @click="toggleNav" />
-		<HeaderNavMobile v-model:is-open="isNavOpen" />
+	<header class="relative z-50 flex h-24 bg-stone-950/60 p-4 backdrop-blur-sm">
+		<div class="mx-auto flex w-full max-w-7xl items-center justify-between">
+			<NuxtLink to="/">
+				<HeaderLogo class="size-14 text-stone-200" />
+			</NuxtLink>
+			<HeaderHamburger @click="toggleNav" />
+			<HeaderNavMobile v-model:is-open="isNavOpen" />
+		</div>
 	</header>
 </template>
 

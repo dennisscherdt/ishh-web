@@ -1,7 +1,7 @@
 <template>
 	<section
 		:class="[
-			'flex flex-col items-center justify-center gap-4 rounded-xl p-4',
+			'flex max-w-sm flex-col items-center justify-center gap-4 rounded-xl p-4',
 			'bg-stone-600/40 backdrop-blur-xs',
 		]"
 	>
