@@ -1,6 +1,9 @@
 <template>
-	<div>
-		<h1>Contact</h1>
+	<div class="text-stone-200">
+		<h1 class="text-4xl font-bold">Contact</h1>
+		<br />
+		<p class="text-lg">Dennis Scherdt</p>
+		<p class="text-lg">dennis@ishhsound.com</p>
 	</div>
 </template>
 
