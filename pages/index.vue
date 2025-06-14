@@ -6,7 +6,7 @@
 			title="Old Soul Joints"
 			release-date="June 20th, 2025"
 			:links="{
-				appleMusic: '#',
+				apple: '#',
 				spotify: '#',
 				youtube: '#',
 				soundcloud: '#',
