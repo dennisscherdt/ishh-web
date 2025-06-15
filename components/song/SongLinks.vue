@@ -4,7 +4,8 @@
 			v-for="(link, key) in links"
 			:key="key"
 			:href="link"
-			:aria-label="`Listen to ${title} on ${key.charAt(0).toUpperCase() + key.slice(1)}`"
+			:aria-label="`Listen to ${title} on ${capitalize(key)}`"
+			:title="capitalize(key)"
 			target="_blank"
 			rel="noopener noreferrer"
 			class="rounded-full"
@@ -45,4 +46,8 @@ defineProps<{
 	links: SongLinks;
 	title: string;
 }>();
+
+function capitalize(str: string) {
+	return str.charAt(0).toUpperCase() + str.slice(1);
+}
 </script>
