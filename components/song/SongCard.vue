@@ -14,7 +14,7 @@
 			class="rounded-lg"
 		/>
 		<div>
-			<p class="text-2xl font-bold text-stone-200">{{ title }}</p>
+			<p class="text-2xl font-bold text-stone-100">{{ title }}</p>
 			<p class="text-xs text-stone-400">Release date: {{ releaseDate }}</p>
 		</div>
 		<SongLinks :links />

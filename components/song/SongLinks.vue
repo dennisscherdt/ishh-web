@@ -9,7 +9,7 @@
 		>
 			<component
 				:is="iconMap[key]"
-				class="size-12 rounded-full border border-stone-200 p-1.5 text-stone-200"
+				class="size-12 rounded-full border border-stone-200 p-1.5 text-stone-100"
 			/>
 		</a>
 	</div>

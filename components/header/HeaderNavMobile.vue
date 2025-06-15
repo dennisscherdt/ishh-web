@@ -7,7 +7,7 @@
 		>
 			<div class="flex h-24 items-center justify-end p-4">
 				<button
-					class="cursor-pointer text-stone-200 hover:text-stone-400"
+					class="cursor-pointer text-stone-100 hover:text-stone-400"
 					aria-label="Close navigation menu"
 					@click="closeMenu"
 				>
@@ -32,7 +32,7 @@
 				<li v-for="item in navItems" :key="item.label">
 					<NuxtLink
 						:to="item.to"
-						class="block text-lg text-stone-200 hover:text-stone-400"
+						class="block text-lg text-stone-100 hover:text-stone-400"
 						:class="{ 'text-stone-400': $route.path === item.to }"
 						@click="closeMenu"
 					>

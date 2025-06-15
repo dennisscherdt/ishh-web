@@ -14,7 +14,7 @@
 			}"
 			class="mx-auto"
 		/>
-		<p class="text-center text-lg text-stone-200">Just getting started... more to come soon.</p>
+		<p class="text-center text-lg text-stone-100">Just getting started... more to come soon.</p>
 	</div>
 </template>
 
