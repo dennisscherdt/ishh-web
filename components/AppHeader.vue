@@ -1,7 +1,7 @@
 <template>
 	<header class="relative z-50 flex h-24 bg-stone-950/60 p-4 backdrop-blur-sm">
 		<div class="mx-auto flex w-full max-w-7xl items-center justify-between">
-			<NuxtLink to="/">
+			<NuxtLink to="/" aria-label="Go to homepage">
 				<HeaderLogo class="size-14 text-stone-200" />
 			</NuxtLink>
 			<HeaderHamburger :is-open="isNavOpen" @click="toggleNav" />
