@@ -45,6 +45,11 @@ export default defineNuxtConfig({
 		'@nuxtjs/sitemap',
 	],
 
+	site: {
+		url: 'https://ishhmusic.com',
+		name: 'Ishh Music',
+	},
+
 	typescript: {
 		typeCheck: true,
 	},
