@@ -11,7 +11,7 @@
 			<div class="flex h-24 items-center justify-end p-4">
 				<button
 					ref="closeButton"
-					class="cursor-pointer rounded p-2 text-stone-100 hover:text-stone-400 focus:ring-2 focus:ring-stone-400 focus:ring-offset-2 focus:ring-offset-stone-900 focus:outline-none"
+					class="cursor-pointer rounded p-2 text-stone-100 hover:text-stone-400"
 					aria-label="Close navigation menu"
 					@click="closeMenu"
 				>
@@ -37,7 +37,7 @@
 				<li v-for="item in navItems" :key="item.label" role="none">
 					<NuxtLink
 						:to="item.to"
-						class="block rounded px-2 py-3 text-lg text-stone-100 hover:text-stone-400 focus:ring-2 focus:ring-stone-400 focus:ring-offset-2 focus:ring-offset-stone-900 focus:outline-none"
+						class="block rounded px-2 py-3 text-lg text-stone-100 hover:text-stone-400"
 						:class="{ 'underline underline-offset-8': $route.path === item.to }"
 						role="menuitem"
 						:aria-current="$route.path === item.to ? 'page' : undefined"

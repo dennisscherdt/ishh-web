@@ -15,3 +15,15 @@ html {
 	-ms-overflow-style: none; /* IE and Edge */
 	scrollbar-width: none; /* Firefox */
 }
+
+/* Hide focus rings by default */
+*:focus:not(:focus-visible) {
+	outline: none !important;
+	box-shadow: none !important;
+}
+
+/* Show focus rings only for keyboard navigation */
+*:focus-visible {
+	outline: none !important;
+	@apply ring-2 ring-stone-400 ring-offset-2 ring-offset-stone-900;
+}

@@ -7,7 +7,7 @@
 			:aria-label="`Listen to ${title} on ${key.charAt(0).toUpperCase() + key.slice(1)}`"
 			target="_blank"
 			rel="noopener noreferrer"
-			class="rounded-full focus:ring-2 focus:ring-stone-400 focus:ring-offset-2 focus:ring-offset-stone-900 focus:outline-none"
+			class="rounded-full"
 		>
 			<component
 				:is="iconMap[key]"
