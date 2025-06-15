@@ -60,14 +60,9 @@ interface NavItem {
 const isOpen = defineModel<boolean>('isOpen', { required: true });
 const closeButton = ref<HTMLButtonElement | null>(null);
 
-// Focus management
 watch(isOpen, (value) => {
 	if (value) {
 		document.body.style.overflow = 'hidden';
-		// Focus the close button when menu opens
-		nextTick(() => {
-			closeButton.value?.focus();
-		});
 	} else {
 		document.body.style.overflow = '';
 	}
