@@ -5,7 +5,14 @@
 			'bg-stone-600/40 backdrop-blur-xs',
 		]"
 	>
-		<img :src="image" :alt="imageAlt" width="900" height="900" class="rounded-lg" />
+		<img
+			:src="image"
+			:alt="imageAlt"
+			width="900"
+			height="900"
+			fetchpriority="high"
+			class="rounded-lg"
+		/>
 		<div>
 			<p class="text-2xl font-bold text-stone-200">{{ title }}</p>
 			<p class="text-xs text-stone-400">Release date: {{ releaseDate }}</p>
