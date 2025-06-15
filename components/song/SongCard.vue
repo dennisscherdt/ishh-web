@@ -17,9 +17,11 @@
 		/>
 		<div>
 			<h2 :id="titleId" class="text-2xl font-bold text-stone-100">{{ title }}</h2>
-			<p class="text-xs text-stone-400">
+			<p class="text-center text-xs text-stone-400">
 				<span class="sr-only">Release date:</span>
-				<time :datetime="formatDateForDateTime(releaseDate)">{{ releaseDate }}</time>
+				<time :datetime="formatDateForDateTime(releaseDate)">{{
+					formatDateForDisplay(releaseDate)
+				}}</time>
 			</p>
 		</div>
 		<SongLinks :links="links" :title="title" />
@@ -27,48 +29,37 @@
 </template>
 
 <script setup lang="ts">
+import { format } from 'date-fns';
 import SongLinks from './SongLinks.vue';
 import type { SongLinks as SongLinksProps } from './SongLinks.vue';
 import { computed } from 'vue';
+
+interface ReleaseDate {
+	month: number;
+	day: number;
+	year: number;
+}
 
 interface Song {
 	image: string;
 	imageAlt: string;
 	title: string;
-	releaseDate: string;
+	releaseDate: ReleaseDate;
 	links: SongLinksProps;
 }
 
 const props = defineProps<Song>();
 
-// Generate a unique ID for the title
 const titleId = computed(() => `song-title-${props.title.toLowerCase().replace(/\s+/g, '-')}`);
 
-// Format the date for the datetime attribute
-function formatDateForDateTime(dateStr: string) {
-	// Convert date like "June 20th, 2025" to "2025-06-20"
-	const months: Record<string, string> = {
-		January: '01',
-		February: '02',
-		March: '03',
-		April: '04',
-		May: '05',
-		June: '06',
-		July: '07',
-		August: '08',
-		September: '09',
-		October: '10',
-		November: '11',
-		December: '12',
-	};
+function formatDateForDateTime(date: ReleaseDate): string {
+	const month = date.month.toString().padStart(2, '0');
+	const day = date.day.toString().padStart(2, '0');
+	return `${date.year}-${month}-${day}`;
+}
 
-	const parts = dateStr.match(/(\w+)\s+(\d+)\w+,\s+(\d{4})/);
-	if (!parts) return '';
-
-	const [, month, day, year] = parts;
-	const monthNum = months[month as keyof typeof months];
-	const dayPadded = day.padStart(2, '0');
-
-	return `${year}-${monthNum}-${dayPadded}`;
+function formatDateForDisplay(date: ReleaseDate): string {
+	const dateObj = new Date(date.year, date.month - 1, date.day);
+	return format(dateObj, 'MMMM do, yyyy');
 }
 </script>

@@ -4,7 +4,11 @@
 			:image="oldSoulJointsCover"
 			image-alt="Old Soul Joints"
 			title="Old Soul Joints"
-			release-date="June 20th, 2025"
+			:release-date="{
+				month: 6,
+				day: 20,
+				year: 2025,
+			}"
 			:links="{
 				apple: '#',
 				spotify: '#',
