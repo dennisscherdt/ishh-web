@@ -21,7 +21,7 @@
 		</picture>
 		<div>
 			<h2 :id="titleId" class="text-2xl font-bold text-stone-100">{{ title }}</h2>
-			<p class="text-center text-xs text-stone-400">
+			<p class="text-center text-xs text-stone-300">
 				<span class="sr-only">Release date:</span>
 				<time :datetime="formatDateForDateTime(releaseDate)">{{
 					formatDateForDisplay(releaseDate)
