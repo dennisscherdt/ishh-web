@@ -7,7 +7,7 @@
 		>
 			<div class="flex h-24 items-center justify-end p-4">
 				<button
-					class="text-stone-200 hover:text-stone-400"
+					class="cursor-pointer text-stone-200 hover:text-stone-400"
 					aria-label="Close navigation menu"
 					@click="closeMenu"
 				>

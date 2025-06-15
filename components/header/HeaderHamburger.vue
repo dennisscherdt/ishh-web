@@ -1,6 +1,6 @@
 <template>
 	<button
-		class="flex flex-col items-center gap-2"
+		class="flex h-full cursor-pointer flex-col items-center justify-center gap-2"
 		aria-label="Toggle menu"
 		:aria-expanded="isOpen"
 		aria-controls="main-menu"
