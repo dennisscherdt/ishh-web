@@ -1,15 +1,18 @@
 <template>
-	<div class="flex gap-4">
+	<div class="flex gap-4" role="group" :aria-label="`Listen to ${title} on streaming platforms`">
 		<a
 			v-for="(link, key) in links"
 			:key="key"
 			:href="link"
-			:aria-label="`Listen on ${key.charAt(0).toUpperCase() + key.slice(1)}`"
+			:aria-label="`Listen to ${title} on ${key.charAt(0).toUpperCase() + key.slice(1)}`"
 			target="_blank"
+			rel="noopener noreferrer"
+			class="rounded-full focus:ring-2 focus:ring-stone-400 focus:ring-offset-2 focus:ring-offset-stone-900 focus:outline-none"
 		>
 			<component
 				:is="iconMap[key]"
 				class="size-12 rounded-full border border-stone-200 p-1.5 text-stone-100"
+				aria-hidden="true"
 			/>
 		</a>
 	</div>
@@ -37,5 +40,9 @@ const iconMap: Record<string, Component> = {
 	soundcloud: IconSoundcloud,
 	bandcamp: IconBandcamp,
 };
-defineProps<{ links: SongLinks }>();
+
+defineProps<{
+	links: SongLinks;
+	title: string;
+}>();
 </script>
