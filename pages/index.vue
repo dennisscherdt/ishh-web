@@ -24,5 +24,11 @@ import oldSoulJointsCover from '~/public/images/covers/old-soul-joints-ishh-cove
 
 useHead({
 	title: 'Ishh Music',
+	meta: [
+		{
+			name: 'description',
+			content: 'Electronic bass music',
+		},
+	],
 });
 </script>
