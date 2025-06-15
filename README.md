@@ -1,75 +1,15 @@
-# Nuxt Minimal Starter
+## Image Requirements
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+### Song Card Images
 
-## Setup
+Each song card requires two image sizes for optimal performance across devices:
 
-Make sure to install dependencies:
+- Desktop: 900x900 pixels
+- Mobile: 400x400 pixels
 
-```bash
-# npm
-npm install
+When adding new song images, please provide both sizes to ensure the best user experience. The images should be:
 
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+- Square aspect ratio (1:1)
+- High quality, but optimized for web (preferably in WebP format)
+- The mobile version (400x400) is used for viewport widths up to 767px
+- The desktop version (900x900) is used for viewport widths 768px and above

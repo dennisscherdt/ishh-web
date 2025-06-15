@@ -6,15 +6,19 @@
 		]"
 		role="article"
 	>
-		<img
-			:src="image"
-			:alt="imageAlt"
-			width="900"
-			height="900"
-			fetchpriority="high"
-			class="rounded-lg"
-			:aria-labelledby="titleId"
-		/>
+		<picture>
+			<source media="(min-width: 768px)" :srcset="image" width="900" height="900" />
+			<source media="(max-width: 767px)" :srcset="imageMobile" width="400" height="400" />
+			<img
+				:src="image"
+				:alt="imageAlt"
+				width="900"
+				height="900"
+				fetchpriority="high"
+				class="rounded-lg"
+				:aria-labelledby="titleId"
+			/>
+		</picture>
 		<div>
 			<h2 :id="titleId" class="text-2xl font-bold text-stone-100">{{ title }}</h2>
 			<p class="text-center text-xs text-stone-400">
@@ -32,7 +36,6 @@
 import { format } from 'date-fns';
 import SongLinks from './SongLinks.vue';
 import type { SongLinks as SongLinksProps } from './SongLinks.vue';
-import { computed } from 'vue';
 
 interface ReleaseDate {
 	month: number;
@@ -42,6 +45,7 @@ interface ReleaseDate {
 
 interface Song {
 	image: string;
+	imageMobile: string;
 	imageAlt: string;
 	title: string;
 	releaseDate: ReleaseDate;

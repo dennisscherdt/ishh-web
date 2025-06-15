@@ -2,6 +2,7 @@
 	<div class="space-y-8">
 		<SongCard
 			:image="oldSoulJointsCover"
+			:image-mobile="oldSoulJointsCoverMobile"
 			image-alt="Old Soul Joints"
 			title="Old Soul Joints"
 			:release-date="{
@@ -25,6 +26,7 @@
 <script setup lang="ts">
 import SongCard from '~/components/song/SongCard.vue';
 import oldSoulJointsCover from '~/public/images/covers/old-soul-joints-ishh-cover.jpg';
+import oldSoulJointsCoverMobile from '~/public/images/covers/old-soul-joints-ishh-cover-mobile.jpg';
 
 useHead({
 	title: 'Ishh Music',
