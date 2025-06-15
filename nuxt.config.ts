@@ -9,6 +9,10 @@ export default defineNuxtConfig({
 			},
 			meta: [
 				{
+					name: 'viewport',
+					content: 'width=device-width, initial-scale=1',
+				},
+				{
 					name: 'og:site_name',
 					content: 'Ishh Music',
 					tagPriority: 11,
