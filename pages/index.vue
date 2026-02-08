@@ -20,8 +20,28 @@ import SongCard from '~/components/song/SongCard.vue';
 import type { Song } from '~/components/song/SongCard.vue';
 import oldSoulJointsCover from '~/public/images/covers/old-soul-joints-ishh-cover.jpg';
 import oldSoulJointsCoverMobile from '~/public/images/covers/old-soul-joints-ishh-cover-mobile.jpg';
+import swimCover from '~/public/images/covers/swim-ishh-cover.jpg';
+import swimCoverMobile from '~/public/images/covers/swim-ishh-cover-mobile.jpg';
 
 const songs: Song[] = [
+	{
+		title: 'Swim',
+		image: swimCover,
+		imageMobile: swimCoverMobile,
+		imageAlt: 'Swim cover',
+		releaseDate: {
+			month: 11,
+			day: 28,
+			year: 2025,
+		},
+		links: {
+			apple: 'https://music.apple.com/us/album/swim-single/1852876810',
+			spotify: 'https://open.spotify.com/album/2QbdWn3Xf4vPM1NCmkj5cV',
+			youtube: 'https://youtu.be/_p24n7-UnV8?si=eWpdGG7HNNVokeGe',
+			soundcloud: 'https://soundcloud.com/ishhhhhh/swim',
+			bandcamp: 'https://ishhhh.bandcamp.com/track/swim',
+		},
+	},
 	{
 		title: 'Old Soul Joints',
 		image: oldSoulJointsCover,
