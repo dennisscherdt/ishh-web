@@ -19,7 +19,7 @@
 				:aria-labelledby="titleId"
 			/>
 		</picture>
-		<div>
+		<div class="text-center">
 			<h2 :id="titleId" class="text-2xl font-bold text-stone-100">{{ title }}</h2>
 			<p class="text-center text-xs text-stone-300">
 				<span class="sr-only">Release date:</span>
@@ -43,7 +43,7 @@ interface ReleaseDate {
 	year: number;
 }
 
-interface Song {
+export interface Song {
 	image: string;
 	imageMobile: string;
 	imageAlt: string;
