@@ -43,7 +43,7 @@ interface ReleaseDate {
 	year: number;
 }
 
-interface Song {
+export interface Song {
 	image: string;
 	imageMobile: string;
 	imageAlt: string;
