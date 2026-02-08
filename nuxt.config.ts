@@ -49,7 +49,9 @@ export default defineNuxtConfig({
 		'@nuxtjs/sitemap',
 	],
 
-	routeRules: { '/*': { prerender: true } },
+	nitro: {
+		routeRules: { '/**': { prerender: true } },
+	},
 
 	site: {
 		url: 'https://ishhmusic.com',
