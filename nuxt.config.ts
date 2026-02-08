@@ -49,6 +49,8 @@ export default defineNuxtConfig({
 		'@nuxtjs/sitemap',
 	],
 
+	routeRules: { '/*': { prerender: true } },
+
 	site: {
 		url: 'https://ishhmusic.com',
 		name: 'Ishh Music',
