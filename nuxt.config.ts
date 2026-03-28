@@ -7,6 +7,8 @@ export default defineNuxtConfig({
 			htmlAttrs: {
 				lang: 'en',
 			},
+			// stone-900 hardcoded — fires before Tailwind variables exist to prevent white flash
+			style: [{ innerHTML: 'html,body{background-color:#1c1917}' }],
 			meta: [
 				{
 					name: 'viewport',

@@ -1,5 +1,11 @@
 @import 'tailwindcss';
 
+/* Overrides Tailwind's base background; avoids white flash before bg image loads */
+html,
+body {
+	background-color: var(--color-stone-900);
+}
+
 /* Prevent layout shift from scrollbar */
 html {
 	overflow-y: scroll;

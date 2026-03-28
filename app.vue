@@ -25,6 +25,7 @@ import AppFooter from '~/components/AppFooter.vue';
 	left: 0;
 	width: 100%;
 	height: 100%;
+	background-color: var(--color-stone-900);
 	background-image: url('~/public/images/abstract-bg-1.jpg');
 	background-size: cover;
 	background-position: center;
