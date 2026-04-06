@@ -9,6 +9,9 @@ concurrency:
     group: ${{ github.workflow }}-${{ github.ref }}
     cancel-in-progress: true
 
+env:
+    NPM_VERSION: '11'
+
 jobs:
     lint:
         name: Lint
@@ -20,11 +23,11 @@ jobs:
             - name: Setup Node.js
               uses: actions/setup-node@v6
               with:
-                  node-version: '22'
+                  node-version: '24'
                   cache: 'npm'
 
-            - name: Upgrade npm
-              run: npm install -g npm@11
+            - name: Use npm ${{ env.NPM_VERSION }}
+              run: npm install -g npm@${{ env.NPM_VERSION }}
 
             - name: Install dependencies
               run: npm ci
@@ -42,11 +45,11 @@ jobs:
             - name: Setup Node.js
               uses: actions/setup-node@v6
               with:
-                  node-version: '22'
+                  node-version: '24'
                   cache: 'npm'
 
-            - name: Upgrade npm
-              run: npm install -g npm@11
+            - name: Use npm ${{ env.NPM_VERSION }}
+              run: npm install -g npm@${{ env.NPM_VERSION }}
 
             - name: Install dependencies
               run: npm ci
